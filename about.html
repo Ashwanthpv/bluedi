@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - BlueDiamond</title>
+
+  <style>
+    /* ---------- Global Styles ---------- */
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(-45deg, #ee7752, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
+      min-height: 100vh;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ---------- Header (Sky Blue) ---------- */
+    header {
+      background: linear-gradient(135deg, #87ceeb, #00bcd4);
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-section img {
+      width: 200px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid #fff;
+    }
+
+    /* ---------- Navigation ---------- */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #003b5c;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #ffffff;
+      border-bottom: 2px solid #ffffff;
+      padding-bottom: 3px;
+    }
+
+    /* ---------- Hamburger ---------- */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 28px;
+      height: 3px;
+      background: #003b5c;
+      margin: 4px 0;
+    }
+
+    /* ---------- Content ---------- */
+    .content {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .content h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      background: rgba(255,255,255,0.9);
+      color: #222;
+      padding: 20px;
+      border-radius: 10px;
+      line-height: 1.8;
+      text-align: justify;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    .about-image {
+      margin-top: 40px;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    /* ---------- Clients ---------- */
+    .clients-section {
+      background: white;
+      padding: 60px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .clients-section h2 {
+      color: #0077cc;
+      margin-bottom: 30px;
+    }
+
+    .clients-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .clients-logos img {
+      width: 120px;
+      height: 70px;
+      object-fit: contain;
+      background: #f8f8f8;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background: linear-gradient(135deg, #0077cc, #00bcd4);
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+
+    footer img {
+      width: 220px;
+      border-radius: 12px;
+      border: 3px solid white;
+      margin-bottom: 15px;
+    }
+
+    .footer-buttons a {
+      display: inline-block;
+      background: white;
+      color: #0077cc;
+      padding: 10px 18px;
+      margin: 6px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 768px) {
+      .menu-toggle { display: flex; }
+
+      nav {
+        display: none;
+        width: 100%;
+        background: linear-gradient(135deg, #87ceeb, #00bcd4);
+        margin-top: 15px;
+        border-radius: 0 0 12px 12px;
+      }
+
+      nav.active { display: block; }
+
+      nav ul {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo-section">
+      <img src="asset/21.jpg" alt="BlueDiamond Logo">
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content">
+    <h2>About Us</h2>
+    <p>
+      <strong>BlueDiamond</strong> is a leading environmental solutions company dedicated to sustainable waste management
+      and advanced Effluent Treatment Plant (ETP) systems. We design and operate eco-friendly treatment facilities that
+      ensure industrial and municipal waste is processed responsibly for a greener future.
+    </p>
+
+    <div class="about-image">
+      <img src="asset/21.jpg" alt="ETP Facility">
+    </div>
+  </section>
+
+  <section class="clients-section">
+    <h2>Our Clients</h2>
+    <div class="clients-logos">
+     <img src="asset/c1.png" alt="Client 1"> <img src="asset/c2.png" alt="Client 2"> <img src="asset/c3.png" alt="Client 3"> <img src="asset/c4.png" alt="Client 4"> <img src="asset/c5.png" alt="Client 5"> <img src="asset/c6.png" alt="Client 6"> <img src="asset/c7.png" alt="Client 7"> <img src="asset/c8.jpg" alt="Client 8"> <img src="asset/c9.jpg" alt="Client 9"> <img src="asset/c10.jpg" alt="Client 10"> <img src="asset/c11.jpg" alt="Client 11"> <img src="asset/c13.jpg" alt="Client 12"> <img src="asset/c14.jpg" alt="Client 13"> <img src="asset/c15.jpg" alt="Client 14"> <img src="asset/c16.jpg" alt="Client rt">
+    </div>
+  </section>
+
+  <footer>
+    <img src="asset/c3.png" alt="Logo">
+    <h3>BlueDiamond ETP Solutions</h3>
+    <p>📍 Main Road, Puthan Theru, Malappuram</p>
+
+    <div class="footer-buttons">
+      <a href="#">WhatsApp</a>
+      <a href="#">Instagram</a>
+      <a href="#">Telegram</a>
+      <a href="#">Email</a>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav-menu');
+    toggle.onclick = () => nav.classList.toggle('active');
+  </script>
+</body>
+</html>

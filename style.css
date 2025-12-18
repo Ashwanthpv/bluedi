@@ -1,0 +1,137 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Animated Gradient Background */
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  color: white;
+  min-height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 15px 0;
+  text-align: center;
+}
+nav ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 30px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav ul li a:hover,
+.active {
+  color: #fff200;
+}
+
+/* Page Content */
+.content {
+  text-align: center;
+  margin-top: 100px;
+  animation: fadeIn 1.5s ease;
+}
+.content h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.content p {
+  font-size: 1.2em;
+}
+
+/* Landing Page */
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.landing-container {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.fade-in {
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+
+.enter-btn {
+  padding: 15px 40px;
+  font-size: 1.2em;
+  color: white;
+  background: #111;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.enter-btn:hover {
+  background: #fff200;
+  color: #111;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ===== SLIDER STYLES ===== */
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 50px auto;
+  width: 80%;
+  max-width: 900px;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.slider img {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider img.active {
+  opacity: 1;
+}
+.company-name {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  font-stretch: semi-expanded;
+  font-size: 2rem;
+  color: white;
+  letter-spacing: 1px;
+}
+

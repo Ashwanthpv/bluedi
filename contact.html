@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+
+  <style>
+    body {
+      background: #ffffff;
+      color: #000;
+      min-height: 100vh;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* Header */
+    header {
+      background: #0077b6;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 45px;
+      width: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Content */
+    .content {
+      text-align: center;
+      padding: 40px 15px;
+    }
+
+    h1 {
+      color: #0077b6;
+    }
+
+    form {
+      max-width: 450px;
+      margin: 30px auto;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #023e8a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #0077b6;
+      color: white;
+      margin-top: 40px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul {
+        justify-content: center;
+      }
+
+      .logo img {
+        height: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="asset/21.jpg" alt="BlueDiamond Water Solution Logo">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Content -->
+  <section class="content">
+    <h1>Contact Us</h1>
+    <p>Email: bluediamondbuisness@gmail.com</p>
+    <p>Phone: +91 9048015678</p>
+
+    <form id="contactForm">
+      <label>Full Name</label>
+      <input type="text" id="name" required>
+
+      <label>Your Email</label>
+      <input type="email" id="email" required>
+
+      <label>Message</label>
+      <textarea id="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <a href="https://www.navigatorassist.in/" style="color:white;text-decoration:none;">
+      &copy; 2025 NavigatorAssist. All Rights Reserved.
+    </a>
+  </footer>
+
+  <!-- Mail Script -->
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const name = name.value;
+      const email = email.value;
+      const message = message.value;
+
+      window.location.href =
+        `mailto:brookstonegift@gmail.com?subject=Contact from ${name}&body=Email: ${email}%0D%0A${message}`;
+    });
+  </script>
+
+</body>
+</html>
