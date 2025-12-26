@@ -3,212 +3,223 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blue Diamond Water Solutions</title>
+<title>Blue Diamond </title>
+<br>
+<title>Water Solutions</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-/* ---------- RESET ---------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins",sans-serif;
+}
+body{
+  background:#0c0c0c;
+  color:#fff;
 }
 
-/* ---------- BODY ---------- */
-body {
-  background: #0c0c0c;
-  color: #fff;
+/* ================= HEADER ================= */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:14px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.9);
+  z-index:1000;
+}
+header h1{
+  color:#9fbce6;
+  font-size:20px;
+}
+nav{
+  display:flex;
+  gap:20px;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-size:15px;
+}
+nav a:hover{color:#f1c40f;}
+
+.menu-toggle{
+  display:none;
+  font-size:22px;
+  cursor:pointer;
 }
 
-/* ---------- HEADER ---------- */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 15px 6%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0,0,0,0.85);
-  z-index: 1000;
+/* ================= HERO ================= */
+.hero{
+  min-height:100vh;
+  background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+  url("asset/water.png.png") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  padding:120px 6% 60px;
+}
+.hero-content{
+  max-width:600px;
+}
+.hero-content h2{
+  font-size:clamp(28px,5vw,48px);
+  margin-bottom:20px;
+}
+.hero-content p{
+  line-height:1.7;
+  color:#ddd;
+  margin-bottom:30px;
+}
+.hero-content button{
+  padding:12px 35px;
+  background:#f1c40f;
+  border:none;
+  border-radius:30px;
+  font-weight:600;
+  cursor:pointer;
 }
 
-header h1 {
-  color: #9fbce6;
-  font-size: 22px;
+/* ================= OFFERS ================= */
+.offers{
+  padding:70px 6%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+}
+.offer-box{
+  background:#1a1a1a;
+  padding:30px;
+  border-radius:15px;
+  text-align:center;
+}
+.offer-box h3{
+  color:#6339e0;
+  margin-bottom:10px;
 }
 
-header nav {
-  display: flex;
-  gap: 20px;
+/* ================= MENU ================= */
+.menu{
+  padding:70px 6%;
+  background:#111;
+}
+.menu h2{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:clamp(24px,4vw,36px);
+}
+.menu-items{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+.menu-card{
+  background:#e5d2d2;
+  border-radius:15px;
+  overflow:hidden;
+}
+.menu-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+.menu-card div{
+  padding:20px;
+}
+.menu-card h4{
+  color:#111;
+  margin-bottom:10px;
+}
+.menu-card span{
+  color:#222;
+  font-size:14px;
 }
 
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
+/* ================= FOOTER ================= */
+.footer{
+  background:#000;
+  padding:50px 6% 20px;
+  color:#ccc;
+}
+.footer-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:30px;
+}
+.footer-box h3{
+  color:#9fbce6;
+  margin-bottom:15px;
+}
+.footer-box p{
+  font-size:14px;
+  line-height:1.7;
+}
+.footer-box img{
+  width:100%;
+  border-radius:12px;
+}
+.social-icons{
+  margin-top:15px;
+  display:flex;
+  gap:15px;
+}
+.social-icons a{
+  width:40px;
+  height:40px;
+  background:#1a1a1a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:#f1c40f;
+  font-size:18px;
+}
+.footer-bottom{
+  margin-top:30px;
+  text-align:center;
+  font-size:13px;
+  border-top:1px solid #222;
+  padding-top:15px;
 }
 
-header nav a:hover {
-  color: #f1c40f;
-}
-
-/* ---------- HERO ---------- */
-.hero {
-  min-height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
-              url("asset/water.png.png") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  padding: 120px 6% 60px;
-}
-
-.hero-content {
-  max-width: 600px;
-}
-
-.hero-content h2 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.hero-content p {
-  line-height: 1.7;
-  margin-bottom: 30px;
-  color: #ddd;
-}
-
-.hero-content button {
-  padding: 12px 35px;
-  background: #f1c40f;
-  border: none;
-  border-radius: 30px;
-  font-size: 16px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.hero-content button:hover {
-  background: #d4ac0d;
-}
-
-/* ---------- OFFERS ---------- */
-.offers {
-  padding: 70px 6%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
-
-.offer-box {
-  background: #1a1a1a;
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-}
-
-.offer-box h3 {
-  color: #6339e0;
-  margin-bottom: 10px;
-}
-
-/* ---------- MENU ---------- */
-.menu {
-  padding: 70px 6%;
-  background: #111;
-}
-
-.menu h2 {
-  text-align: center;
-  margin-bottom: 50px;
-  font-size: 36px;
-}
-
-.menu-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
-
-.menu-card {
-  background: #e5d2d2;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.menu-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.menu-card div {
-  padding: 20px;
-}
-
-.menu-card h4 {
-  margin-bottom: 10px;
-  color: #111;
-}
-
-.menu-card span {
-  color: #222;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-/* ---------- FOOTER ---------- */
-footer {
-  padding: 25px;
-  text-align: center;
-  background: #000;
-  color: #aaa;
-}
-
-footer a {
-  color: #aaa;
-  text-decoration: none;
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 992px) {
-  .hero-content h2 {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  header nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .hero {
-    text-align: center;
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+  header{
+    flex-wrap:wrap;
   }
 
-  .hero-content h2 {
-    font-size: 34px;
-  }
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 18px;
-    text-align: center;
+  .menu-toggle{
+    display:block;
   }
 
-  .hero-content h2 {
-    font-size: 28px;
+  nav{
+    width:100%;
+    flex-direction:column;
+    display:none;
+    background:#000;
+    padding:15px 0;
+    margin-top:10px;
   }
 
-  .menu h2 {
-    font-size: 28px;
+  nav.active{
+    display:flex;
+  }
+
+  nav a{
+    padding:10px;
+    text-align:center;
+  }
+
+  .hero{
+    text-align:center;
+  }
+
+  .hero-content{
+    margin:auto;
   }
 }
 </style>
@@ -217,8 +228,9 @@ footer a {
 <body>
 
 <header>
-  <h1>Blue Diamond Water Solutions</h1>
-  <nav>
+  <h1>Blue Diamond</h1>
+  <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
+  <nav id="navMenu">
     <a href="home.html">Home</a>
     <a href="services.html">Services</a>
     <a href="about.html">About</a>
@@ -229,9 +241,7 @@ footer a {
 <section class="hero">
   <div class="hero-content">
     <h2>Blue Diamond Water Solutions</h2>
-    <p>
-      To provide world-class solutions that ensure safe, clean, and hygienic drinking water for society. We are committed to improving public health and sustainability through reliable, innovative, and accessible water solutions.
-    </p>
+    <p>Providing safe, clean, and hygienic drinking water through innovative solutions.</p>
     <button>Contact Now</button>
   </div>
 </section>
@@ -243,7 +253,7 @@ footer a {
   </div>
   <div class="offer-box">
     <h3>Our Services</h3>
-    <p>Explore professional water services</p>
+    <p>Professional water treatment services</p>
   </div>
 </section>
 
@@ -254,27 +264,52 @@ footer a {
       <img src="asset/water.png.png">
       <div>
         <h4>Our Vision</h4>
-        <span>
-          To provide world-class solutions that ensure safe, clean, and hygienic drinking water for society.
-        </span>
+        <span>Safe and clean drinking water for everyone.</span>
       </div>
     </div>
-
     <div class="menu-card">
       <img src="asset/ser1 (6).png">
       <div>
         <h4>Our Mission</h4>
-        <span>
-          To harness our expertise to deliver safe and reliable drinking water while promoting sustainability.
-        </span>
+        <span>Deliver reliable and sustainable water solutions.</span>
       </div>
     </div>
   </div>
 </section>
 
-<footer>
-  © <a href="https://www.navigatorassist.in/">All rights reserved to Navigator Assist</a>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-box">
+      <h3>Blue Diamond Water Solutions</h3>
+      <p>Trusted partner for pure and hygienic drinking water.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/919999999999"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-box">
+      <h3>Our Location</h3>
+      <p>Calicut, Kerala<br>India – 673001<br>Phone: +91 99999 99999</p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Find Us</h3>
+      <img src="asset/map.png">
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 <a href="https://www.navigatorassist.in/">Navigator Assist</a>
+  </div>
 </footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
